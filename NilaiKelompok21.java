@@ -5,6 +5,8 @@ public class NilaiKelompok21 {
 
         int i=1, j, nilai;
         float totalNilai, rataNilai;
+        float rataTertinggi = 0;
+        int kelompokTertinggi = 0;
 
         while (i <= 6) {
             System.out.println("Kelompok " +i);
@@ -17,7 +19,14 @@ public class NilaiKelompok21 {
         }
         rataNilai=totalNilai/5;
         System.out.println("Kelompok " +i + ": nilai rata-rata = " + rataNilai);
+
+        if (rataNilai > rataTertinggi) {
+            rataTertinggi = rataNilai;
+            kelompokTertinggi = i;
+        }
+
         i++;
         }
+        System.out.println("\nKelompok dengan nilai rata-rata tertinggi adalah kelompok " +kelompokTertinggi+ " dengan rata-rata nilai " +rataTertinggi);
     }
 }
